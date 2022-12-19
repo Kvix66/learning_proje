@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:learning_proje/home-page.dart';
 
 void main() {
   runApp(const MyApp());
@@ -48,7 +49,14 @@ class Die extends StatelessWidget {
               height: 10.0,
             ),
             ElevatedButton(
-              onPressed: () {},
+              //loging
+              onPressed: () {
+                Navigator.of(context).push(
+                  MaterialPageRoute(builder: (BuildContext context) {
+                    return const HomePage();
+                  }),
+                );
+              },
               style: ElevatedButton.styleFrom(
                   primary: Colors.purple, minimumSize: const Size(200, 30)),
               child: const Text(

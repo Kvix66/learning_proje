@@ -87,35 +87,47 @@ class HomePage extends StatelessWidget {
                     ],
                   )),
             ),
-            Container(
-                //Second Container
-                margin: const EdgeInsets.symmetric(
-                    horizontal: 10.2, vertical: 10.2),
-                //color: Colors.white,
-                width: double.infinity,
-                decoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(15),
-                    color: Colors.amber,
-                    boxShadow: const [
-                      BoxShadow(
-                        color: Colors.black12,
-                        spreadRadius: 2,
-                        blurRadius: 2,
-                        offset: Offset(
-                          2,
-                          2,
+            GestureDetector(
+              // it make it clickable
+              onTap: () {
+                Navigator.of(context).push(
+                  MaterialPageRoute(
+                    builder: (BuildContext context) {
+                      return Container();
+                    },
+                  ),
+                );
+              },
+              child: Container(
+                  //Second Container
+                  margin: const EdgeInsets.symmetric(
+                      horizontal: 10.2, vertical: 10.2),
+                  //color: Colors.white,
+                  width: double.infinity,
+                  decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(15),
+                      color: Colors.red,
+                      boxShadow: const [
+                        BoxShadow(
+                          color: Colors.black12,
+                          spreadRadius: 2,
+                          blurRadius: 2,
+                          offset: Offset(
+                            2,
+                            2,
+                          ),
                         ),
-                      ),
-                    ]),
-                child: Column(
-                  children: [
-                    Image.asset('images/flame-welcome.png'),
-                    const ListTile(
-                      title: Text("data"),
-                      trailing: Icon(Icons.arrow_forward_ios_rounded),
-                    )
-                  ],
-                ))
+                      ]),
+                  child: Column(
+                    children: [
+                      Image.asset('images/flame-welcome.png'),
+                      const ListTile(
+                        title: Text("How to die"),
+                        trailing: Icon(Icons.arrow_forward_ios_rounded),
+                      )
+                    ],
+                  )),
+            )
           ],
         ),
       ),

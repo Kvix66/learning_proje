@@ -58,7 +58,8 @@ class Die extends StatelessWidget {
                 );
               },
               style: ElevatedButton.styleFrom(
-                  primary: Colors.purple, minimumSize: const Size(200, 30)),
+                  backgroundColor: Colors.purple,
+                  minimumSize: const Size(200, 30)),
               child: const Text(
                 'login',
                 style: TextStyle(color: Colors.white),
@@ -67,7 +68,8 @@ class Die extends StatelessWidget {
             ElevatedButton(
                 onPressed: () {},
                 style: ElevatedButton.styleFrom(
-                    primary: Colors.red[400], minimumSize: const Size(200, 30)),
+                    backgroundColor: Colors.red[400],
+                    minimumSize: const Size(200, 30)),
                 child: const Text('Die'))
           ]),
         ));

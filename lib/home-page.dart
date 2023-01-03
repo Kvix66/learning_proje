@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:learning_proje/description_page.dart';
+import 'package:learning_proje/main.dart';
 
 class HomePage extends StatelessWidget {
   const HomePage({super.key});
@@ -7,6 +9,55 @@ class HomePage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(),
+      drawer: SafeArea(
+        child: Drawer(
+          child: Column(
+            children: [
+              const DrawerHeader(
+                decoration: BoxDecoration(color: Colors.red),
+                child: ListTile(
+                  title: Text(
+                    'flutter test',
+                    style: TextStyle(color: Colors.white, fontSize: 20.2),
+                  ),
+                ),
+              ),
+              ListTile(
+                onTap: () {
+                  Navigator.of(context).pushReplacement(
+                    MaterialPageRoute(
+                      builder: (BuildContext context) {
+                        return const MyApp();
+                      },
+                    ),
+                  );
+                },
+                leading: const Icon(Icons.settings),
+                title: const Text(
+                  'Settings',
+                  style: TextStyle(color: Colors.red, fontSize: 20.2),
+                ),
+              ),
+              ListTile(
+                onTap: () {
+                  Navigator.of(context).pushReplacement(
+                    MaterialPageRoute(
+                      builder: (BuildContext context) {
+                        return const MyApp();
+                      },
+                    ),
+                  );
+                },
+                leading: const Icon(Icons.logout),
+                title: const Text(
+                  'Logout',
+                  style: TextStyle(color: Colors.red, fontSize: 20.2),
+                ),
+              )
+            ],
+          ),
+        ),
+      ),
       body: SingleChildScrollView(
         child: Column(
           children: [
@@ -52,7 +103,7 @@ class HomePage extends StatelessWidget {
                 Navigator.of(context).push(
                   MaterialPageRoute(
                     builder: (BuildContext context) {
-                      return Container();
+                      return const DiscriptionPage();
                     },
                   ),
                 );
@@ -93,7 +144,7 @@ class HomePage extends StatelessWidget {
                 Navigator.of(context).push(
                   MaterialPageRoute(
                     builder: (BuildContext context) {
-                      return Container();
+                      return const DiscriptionPage();
                     },
                   ),
                 );
